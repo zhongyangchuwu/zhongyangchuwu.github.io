@@ -1,22 +1,32 @@
 # Deploy to GitHub Pages
 
-This repository is a standalone static Astro site. GitHub Actions builds `dist/` and deploys it through `.github/workflows/deploy.yml`.
+This repository is a standalone static Astro user site. GitHub Actions builds `dist/` and deploys it through `.github/workflows/deploy.yml`.
 
-## Repository setup
+## Default deployment
 
-1. Create the public `zhongyangchuwu.github.io` repository and add it as this repository's `origin` remote.
-2. Push the `main` branch.
-3. In **Settings → Pages**, select **GitHub Actions** as the publishing source.
-4. Do not enable Pages until template identity and example content have been replaced with real material.
+The current public address is:
 
-A public standalone repository is the simplest option for a public personal homepage. GitHub Pages publishes public content even when the source repository is private, and private-repository Pages requires an eligible GitHub plan.
+```text
+https://zhongyangchuwu.github.io/
+```
 
-## Custom domain
+Because this repository is the `zhongyangchuwu.github.io` user-site repository, it is served from the domain root. `astro.config.mjs` sets this URL as Astro's `site` value and deliberately has no `base` setting.
 
-The intended public address is `https://zycw.dev`. `astro.config.mjs` already sets this as Astro's `site` URL and deliberately has no `base` setting.
+GitHub Pages is configured to use the **GitHub Actions** publishing source. Do not switch the source back to branch/Jekyll publishing: Astro source files are not Jekyll content.
 
-1. In **Settings → Pages**, set the custom domain to `zycw.dev`.
-2. At the DNS provider, point the apex domain to GitHub Pages using all four `A` records:
+## Repository workflow
+
+1. Push `main`.
+2. The **Deploy to GitHub Pages** workflow installs dependencies, builds `dist/`, uploads the artifact, and deploys it.
+3. Confirm the workflow succeeds and open the `github-pages` deployment URL.
+
+## Optional custom domain
+
+`zycw.dev` is deferred. When you decide to use it:
+
+1. Change Astro's `site` value to `https://zycw.dev`.
+2. In **Settings → Pages**, set the custom domain to `zycw.dev`.
+3. At the DNS provider, point the apex domain to GitHub Pages using all four `A` records:
 
    ```text
    185.199.108.153
@@ -25,16 +35,10 @@ The intended public address is `https://zycw.dev`. `astro.config.mjs` already se
    185.199.111.153
    ```
 
-3. Remove any conflicting active origin for `zycw.dev` before switching DNS.
-4. Wait for GitHub DNS verification, then enable **Enforce HTTPS**.
+4. Remove any conflicting origin, wait for verification, then enable **Enforce HTTPS**.
 
-GitHub Pages custom domains are configured in repository settings; a committed `CNAME` file is not required for this Actions workflow.
+Custom domains are configured in GitHub repository settings; this Actions workflow does not require a committed `CNAME` file.
 
-## Verify
+## Content reminder
 
-After a deployment:
-
-1. Confirm the **Deploy to GitHub Pages** workflow succeeds.
-2. Open the deployment URL shown in the `github-pages` environment.
-3. Verify the homepage, a content-detail page, RSS, and static assets.
-4. After the DNS switch, verify `https://zycw.dev` and the desired `www` behavior.
+The repository currently contains restored template content. Replace Claude Shannon's identity, avatar, social links, and example academic content with real material before treating the public site as your personal homepage.

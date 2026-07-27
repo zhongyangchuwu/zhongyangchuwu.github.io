@@ -21,5 +21,5 @@ export default defineConfig({
   vite: {
     plugins: [tailwindcss()],
   },
-  site: 'https://zycw.dev',
+  site: 'https://zhongyangchuwu.github.io',
 });

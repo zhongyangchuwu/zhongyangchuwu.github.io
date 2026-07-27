@@ -1,6 +1,6 @@
 # ZYCW Main Site
 
-Static personal homepage and research portfolio for `https://zycw.dev`, built with Astro 7.
+Static personal homepage and research portfolio for `https://zhongyangchuwu.github.io/`, built with Astro 7.
 
 ## Development
 
@@ -22,9 +22,9 @@ The static output is written to `dist/`.
 
 ## Deployment
 
-GitHub Actions builds and deploys `dist/` through `.github/workflows/deploy.yml`. The production domain is configured as `https://zycw.dev` in `astro.config.mjs`; do not add an Astro `base` value while using this custom domain.
+GitHub Actions builds and deploys `dist/` through `.github/workflows/deploy.yml`. The production domain is configured as `https://zhongyangchuwu.github.io` in `astro.config.mjs`; do not add an Astro `base` value for this user-site repository.
 
-See [docs/github-pages.md](docs/github-pages.md) for GitHub Pages, custom-domain, DNS, and HTTPS setup.
+See [docs/github-pages.md](docs/github-pages.md) for GitHub Pages deployment and optional future custom-domain setup.
 
 ## Content
 

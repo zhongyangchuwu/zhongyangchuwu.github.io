@@ -4,7 +4,7 @@ This repository is a standalone static Astro site. GitHub Actions builds `dist/`
 
 ## Repository setup
 
-1. Create the `zycw-main-site` GitHub repository and add it as this repository's `origin` remote.
+1. Create the public `zhongyangchuwu.github.io` repository and add it as this repository's `origin` remote.
 2. Push the `main` branch.
 3. In **Settings → Pages**, select **GitHub Actions** as the publishing source.
 4. Do not enable Pages until template identity and example content have been replaced with real material.

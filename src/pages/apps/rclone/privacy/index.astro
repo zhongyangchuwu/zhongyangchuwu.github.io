@@ -1,0 +1,50 @@
+---
+import BaseLayout from "../../../../layouts/BaseLayout.astro";
+---
+
+<BaseLayout title="Privacy Policy — Rclone Personal Drive Access">
+  <div class="container-narrow">
+    <header class="page-header">
+      <h1 class="page-title">Privacy Policy</h1>
+      <p class="page-subtitle">Rclone Personal Drive Access</p>
+    </header>
+
+    <div class="prose">
+      <p>
+        This application is for personal use by the site owner. It uses Google
+        OAuth to allow rclone to access the owner's Google Drive after explicit
+        authorization.
+      </p>
+
+      <h2>Data access and use</h2>
+      <p>
+        Google Drive data is accessed only to perform file operations requested
+        by the account owner through rclone. The application does not operate a
+        separate backend database for storing Google Drive content.
+      </p>
+
+      <h2>Data sharing</h2>
+      <p>
+        User data is not sold, rented, or shared with third parties for
+        advertising, analytics, or other unrelated purposes.
+      </p>
+
+      <h2>Data retention</h2>
+      <p>
+        OAuth credentials and rclone configuration are stored locally in the
+        owner's environment. The website itself does not store Google Drive
+        files or OAuth tokens.
+      </p>
+
+      <h2>Revoking access</h2>
+      <p>
+        The account owner can revoke the application's Google account access at
+        any time from the Google Account security settings.
+      </p>
+
+      <p>
+        <a href="/apps/rclone/">Back to application information</a>
+      </p>
+    </div>
+  </div>
+</BaseLayout>
